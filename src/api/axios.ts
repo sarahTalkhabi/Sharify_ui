@@ -9,7 +9,7 @@ export  interface LoginResponse {
 }
 
 export  const loginUser = async (username: string, password: string): Promise<LoginResponse> => {
-  const response = await axios.post<LoginResponse>('${API_URL}',{username,password});
+  const response = await axios.post<LoginResponse>(`${API_URL}`,{username,password});
   return response.data;
 }
 
